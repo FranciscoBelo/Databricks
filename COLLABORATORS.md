@@ -36,10 +36,9 @@ This guide provides detailed instructions for adding user access to this reposit
 4. **Set Permission Level**
    - Choose one of the following roles:
      - **Read**: View and clone only
-     - **Triage**: Read + manage issues and pull requests
      - **Write**: Read + push to repository
-     - **Maintain**: Write + manage repository without access to sensitive settings
      - **Admin**: Full access to repository including settings
+   - Note: GitHub also offers **Triage** and **Maintain** roles for organization repositories with more granular permissions
 
 5. **Send Invitation**
    - Click "Add [username] to this repository"
@@ -52,10 +51,10 @@ If you have GitHub CLI installed:
 
 ```bash
 # Add a collaborator with write access
-gh api repos/FranciscoBelo/Databricks/collaborators/USERNAME -X PUT -f permission=push
+gh api repos/FranciscoBelo/Databricks/collaborators/USERNAME -X PUT -f permission=write
 
 # Add a collaborator with read access
-gh api repos/FranciscoBelo/Databricks/collaborators/USERNAME -X PUT -f permission=pull
+gh api repos/FranciscoBelo/Databricks/collaborators/USERNAME -X PUT -f permission=read
 
 # Add a collaborator with admin access
 gh api repos/FranciscoBelo/Databricks/collaborators/USERNAME -X PUT -f permission=admin
