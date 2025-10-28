@@ -50,11 +50,11 @@ This guide provides detailed instructions for adding user access to this reposit
 If you have GitHub CLI installed:
 
 ```bash
-# Add a collaborator with write access
-gh api repos/FranciscoBelo/Databricks/collaborators/USERNAME -X PUT -f permission=write
+# Add a collaborator with write access (push)
+gh api repos/FranciscoBelo/Databricks/collaborators/USERNAME -X PUT -f permission=push
 
-# Add a collaborator with read access
-gh api repos/FranciscoBelo/Databricks/collaborators/USERNAME -X PUT -f permission=read
+# Add a collaborator with read access (pull)
+gh api repos/FranciscoBelo/Databricks/collaborators/USERNAME -X PUT -f permission=pull
 
 # Add a collaborator with admin access
 gh api repos/FranciscoBelo/Databricks/collaborators/USERNAME -X PUT -f permission=admin
